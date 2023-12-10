@@ -1,56 +1,194 @@
-header{
-    background-color: transparent;
-    border-bottom: 1px solid gray;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-}
-header::hover{
-    background-color: lightgray;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-}
-header .logo{
-    color: #333;
-    font-size: 24px;
-    font-weight: 700;
-    text-decoration: none;
-}
-.refheader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    padding: 5px;
-    border: 1px solid gray;
-}
-.container{
-    height: 200px;
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(94, 0, 182);  
+  overflow-x: hidden;
 }
 
-/* SWIPER */
+.title {
+  display: absolute;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  top: 200px;
+  left: 180px;
+  font-size: 3rem;
+  position: relative;
+  z-index: 2;
+}
 
-.swiper{
-    width: 50%;
-    background-color: blue;
-    border-radius: 20px;
+.title h1{
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, rgb(243, 216, 255),rgb(226, 163, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.swiper-wrapper{
-    padding: 20px;
+
+.title p {
+  font-size: 2.2rem;
+  color: #eee;
+  margin-top: 0;
+  padding-left: 0;
+  text-indent: 0;
 }
-.swiper-slide h1{
-    text-align: center;    
+
+.circle {
+  position: absolute;
+  top: -200px; 
+  left: -400px;
+  width: 1500px;
+  height: 1500px;
+  background: linear-gradient(45deg, rgb(133, 51, 248), rgb(97,63,255), rgb(194,81,243));
+  border-radius: 50%;
+  z-index: 1;
 }
-.team-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
+
+.imageTitle {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 40vw;
+  height: 100vh;
+  float: right;
+}
+
+.squad{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50vh; 
+  margin-top: 100px;
+  position: relative;
+  z-index: 3;
+}
+
+.squadBackGround{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(38,53,112);  
+  border-radius: 100px 0 100px 0;
+  margin-bottom: -50px;
+}
+
+.nameSquad{
+  font-size: 2rem;
+  background-color: rgb(118,96,243);
+  border-radius: 100px 0 0 0;
+  width: 100%;
+  text-align: center;
+}
+
+.participants{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.elementParticipant{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  width: 220px;
+  height: 320px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(94,147,227);
+}
+
+.imageParticipant{
+  width: 200px;
+  height: 200px;
+}
+
+.logo-text{
+  display: flex;
+  align-items: center;
+}
+
+.logo-text img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 5px;
+}
+
+.elementParticipant h4{
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+button{
+  position: absolute;
+  right: 10%;
+  top:5%;
+  font-size: 4rem;
+  padding-right:20px;
+  padding-left:20px;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover{
+  cursor: pointer;
+  color: rgb(42, 34, 88);
+}
+
+.PhotoSouvenir{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  top: 50vh; 
+  margin-top: 100px;
+  position: relative;
+  z-index: 4;
+}
+
+.PhotoSouvenir h1{
+  font-size: 4rem;
+  background-color: #00e1ff40;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.before,.after{
+  margin-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(39, 95, 180);
+  border-radius: 50px;
+}
+
+
+.Photos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Photos img{
+  width: 77vw;
+  margin: 10px;
+}
+
+.columnPhotos img{
+  width: 25vw;
+  margin: 10px;
+}
+
+.columnPhotos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
