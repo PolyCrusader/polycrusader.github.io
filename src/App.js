@@ -106,11 +106,11 @@ function Equipes() {
     <div>
       {listeEquipes.map((equipe) => (
         <div className="squad" key={equipe.name}>
-          <div className="squadBackGround" style={{ height: 500 + (more === equipe.title ? 75 : 0) }}>
+          <div className="squadBackGround" style={{ height: 500 + (more === equipe.title ? (window.matchMedia("(max-width: 768px)").matches ? 75 : 50) : 0) }}>
             <div className="nameSquad">
               <h2>{equipe.title}</h2>
               {more === equipe.title && <p>{equipe.description}</p>}
-              <button className="button" onClick={() => setMore(equipe.title)}>V</button>
+              <button className="button" onClick={() => more === null ? setMore(equipe.title) : setMore(null)}>V</button>
             </div>
             <div className="participants">
               {participants.filter(participant => participant.equipe === equipe.name).map((participant) => (

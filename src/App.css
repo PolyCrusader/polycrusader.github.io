@@ -19,6 +19,15 @@ body {
   z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+  .title {
+    text-align: center;
+    top: 100px;
+    left: 0px;
+    font-size: 2rem;
+  }
+}
+
 .title h1{
   margin-bottom: 10px;
   background: linear-gradient(to bottom, rgb(243, 216, 255),rgb(226, 163, 255));
@@ -55,6 +64,17 @@ body {
   float: right;
 }
 
+@media screen and (max-width: 768px) {
+  .imageTitle {
+    z-index: 1;
+    float: center;
+    width: 100vw;
+    top: 0;
+    right: 0;
+  }
+  
+}
+
 .squad{
   display: flex;
   align-items: center;
@@ -87,6 +107,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap:nowrap;
 }
 
 .elementParticipant{
